@@ -21,4 +21,10 @@ public class ManagePages extends Base{
     public static void initMortgage(){
         mortgageMain = new pageObjects.mortgage.MainPage(mobileDriver);
     }
+    public static void initToDo(){
+        todoMain = PageFactory.initElements(driver, pageObjects.todo.MainPage.class);
+    }
+    public static void initCalculator(){
+        calcMain = PageFactory.initElements(driver, pageObjects.calculator.MainPage.class);
+    }
 }

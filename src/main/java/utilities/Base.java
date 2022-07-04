@@ -14,6 +14,10 @@ import org.testng.asserts.SoftAssert;
 import pageObjects.grafana.*;
 import pageObjects.mortgage.*;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 
 public class Base {
     // general
@@ -21,6 +25,8 @@ public class Base {
     protected static Actions action;
     protected static SoftAssert softAssert;
     protected static Screen screen;
+    protected static String Platform;
+
 
     // Web
     protected static WebDriver driver;
@@ -35,6 +41,13 @@ public class Base {
     protected static JSONObject params = new JSONObject();
     protected static JsonPath jp;
 
+    // Database
+    protected static Connection con;
+    protected static Statement stmt;
+    protected static ResultSet rs;
+
+
+
 
     // Page Objects
     protected static LoginPage grafanalogin;
@@ -47,5 +60,12 @@ public class Base {
 
     // Page Objects - Mobile
     protected static pageObjects.mortgage.MainPage mortgageMain;
+
+    // Page Objects - Electron
+    protected static pageObjects.todo.MainPage todoMain;
+
+    // Page Objects - Desktop
+    protected static pageObjects.calculator.MainPage calcMain;
+
 
 }

@@ -1,6 +1,7 @@
 package workflows;
 
 import com.google.common.util.concurrent.Uninterruptibles;
+import extensions.DBActions;
 import extensions.UIActions;
 import extensions.Verifications;
 import io.qameta.allure.Step;
@@ -8,12 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import utilities.CommonOps;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
 public class WebFlows extends CommonOps {
 
-    @Step("Business Flow: Login")
+    @Step("Business Flow: Login to Grafana")
     public static void login(String user, String pass){
         UIActions.updateText(grafanalogin.username, user);
         UIActions.updateText(grafanalogin.password, pass);
@@ -21,6 +23,17 @@ public class WebFlows extends CommonOps {
         UIActions.click(grafanalogin.btn_login);
         UIActions.click(grafanalogin.btn_skip);
     }
+    @Step("Business Flow: Login to Grafana with DB Credentials")
+    public static void loginDB() {
+        String query = "SELECT name, password FROM Employees WHERE id='3'";
+        List<String> cred = DBActions.gerCredentials(query);
+        UIActions.updateText(grafanalogin.username, cred.get(0));
+        UIActions.updateText(grafanalogin.password, cred.get(1));
+//        wait.until(ExpectedConditions.elementToBeClickable(grafanalogin.loginButton));
+        UIActions.click(grafanalogin.btn_login);
+        UIActions.click(grafanalogin.btn_skip);
+    }
+
     @Step("Business Flow: Create New User")
     public static void createNewUser(String name, String email, String userName, String pass){
         UIActions.click(grafanaServerAdminMain.btn_newUser);

@@ -3,8 +3,6 @@
     <!-- Timeout -->
     <Timeout>5</Timeout>
 
-    <!-- General -->
-    <PlatformName>mobile</PlatformName>
 
     <!-- Authorization -->
     <UserName>admin</UserName>
@@ -14,7 +12,7 @@
 
     <BrowserName>chrome</BrowserName>
     <url>http://localhost:3000/</url>
-    <ImageRepo>C:\Automation\FinalProject\ImageRepository\GrafanaAvater.png</ImageRepo>
+    <ImageRepo>C:\Automation\Projects\FinalProject\ImageRepository\GrafanaAvater.png</ImageRepo>
 
     <!-- Data Driven Testing -->
     <DDTFile>./DDTFiles/users.csv</DDTFile>
@@ -26,5 +24,18 @@
 
     <!-- API -->
     <urlAPI>http://localhost:3000/</urlAPI>
+
+    <!-- Electron -->
+    <ElectronDriverPath>.\Drivers\electrondriver.exe</ElectronDriverPath>
+    <ElectronAppPath>C:\Users\Maore\AppData\Local\Programs\todolist\Todolist.exe</ElectronAppPath>
+
+    <!-- Desktop -->
+    <CalculatorApp>Microsoft.WindowsCalculator_8wekyb3d8bbwe!App</CalculatorApp>
+    <AppiumServerDesktop>http://127.0.0.1:4723</AppiumServerDesktop>
+
+    <!-- Database -->
+    <DBURL>jdbc:mysql://remotemysql.com:3306/HSJyHdxPl8</DBURL>
+    <DBUserName>HSJyHdxPl8</DBUserName>
+    <DBPassword>Qq0KB3Om1U</DBPassword>
 
 </Enviroment>

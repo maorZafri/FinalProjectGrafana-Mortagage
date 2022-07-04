@@ -2,10 +2,12 @@ package sanity;
 
 import extensions.Verifications;
 import io.qameta.allure.Description;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilities.CommonOps;
 import workflows.ApiFlows;
 
+@Listeners(utilities.Listeners.class)
 public class GrafanaAPI extends CommonOps {
     @Test(description = "Test01 - Get Team from Grafana")
     @Description("This Test Verify Team Property")

@@ -18,13 +18,13 @@ public class MobileAction extends CommonOps {
 
     @Step("Update Text Element")
     public static void updateText(MobileElement elem, String text){
-        wait.until((ExpectedConditions.visibilityOf(elem)));
+       wait.until((ExpectedConditions.visibilityOf(elem)));
         elem.sendKeys(text);
     }
 
     @Step("Tap on Element")
     public static void tap(MobileElement elem) {
-        wait.until(ExpectedConditions.elementToBeClickable(elem));
+       wait.until(ExpectedConditions.elementToBeClickable(elem));
         TouchAction action = new TouchAction(mobileDriver);
         action.tap((new TapOptions())
                 .withElement(ElementOption.element(elem)))

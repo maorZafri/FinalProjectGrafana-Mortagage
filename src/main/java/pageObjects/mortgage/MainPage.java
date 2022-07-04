@@ -14,7 +14,7 @@ public class MainPage {
 
     public MainPage (AppiumDriver mobileDriver){
         this.mobileDriver = mobileDriver;
-        PageFactory.initElements(new AppiumFieldDecorator(mobileDriver, Duration.ofSeconds(3)), this);
+        PageFactory.initElements(new AppiumFieldDecorator(mobileDriver), this);
 
     }
     @AndroidFindBy (id = "etAmount")
@@ -31,5 +31,7 @@ public class MainPage {
 
     @AndroidFindBy (id = "tvRepayment")
     public AndroidElement txt_repayment;
+
+    @AndroidFindBy (id = "button1")
+    public AndroidElement btn_ok;
 }
-//
