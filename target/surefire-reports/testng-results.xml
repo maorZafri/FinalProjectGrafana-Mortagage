@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-07-03T13:38:02 IDT" name="Web Suite" finished-at="2022-07-03T13:38:15 IDT" duration-ms="12990">
+    <groups>
+    </groups>
+    <test started-at="2022-07-03T13:38:02 IDT" name="Web Tests" finished-at="2022-07-03T13:38:15 IDT" duration-ms="12990">
+      <class name="sanity.ToDoListElectron">
+        <test-method is-config="true" signature="startSession(java.lang.String)[pri:0, instance:sanity.ToDoListElectron@a64e035]" started-at="2022-07-03T13:38:02 IDT" name="startSession" finished-at="2022-07-03T13:38:07 IDT" duration-ms="4956" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[electron]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startSession -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:sanity.ToDoListElectron@a64e035]" started-at="2022-07-03T13:38:07 IDT" name="beforeMethod" finished-at="2022-07-03T13:38:07 IDT" duration-ms="75" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void sanity.ToDoListElectron.test01_addAndVerifyNewTask()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test01_addAndVerifyNewTask()[pri:0, instance:sanity.ToDoListElectron@a64e035]" started-at="2022-07-03T13:38:07 IDT" name="test01_addAndVerifyNewTask" description="Test01 - Add And Verify New Task" finished-at="2022-07-03T13:38:09 IDT" duration-ms="2038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test01_addAndVerifyNewTask -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:sanity.ToDoListElectron@a64e035]" started-at="2022-07-03T13:38:09 IDT" name="afterMethod" finished-at="2022-07-03T13:38:14 IDT" duration-ms="5100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:sanity.ToDoListElectron@a64e035]" started-at="2022-07-03T13:38:14 IDT" name="beforeMethod" finished-at="2022-07-03T13:38:14 IDT" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void sanity.ToDoListElectron.test02_addAndVerifyNewTasks()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test02_addAndVerifyNewTasks()[pri:0, instance:sanity.ToDoListElectron@a64e035]" started-at="2022-07-03T13:38:14 IDT" name="test02_addAndVerifyNewTasks" description="Test02 - Add And Verify New Tasks" finished-at="2022-07-03T13:38:14 IDT" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test02_addAndVerifyNewTasks -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:sanity.ToDoListElectron@a64e035]" started-at="2022-07-03T13:38:15 IDT" name="afterMethod" finished-at="2022-07-03T13:38:15 IDT" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="closeSession()[pri:0, instance:sanity.ToDoListElectron@a64e035]" started-at="2022-07-03T13:38:15 IDT" name="closeSession" finished-at="2022-07-03T13:38:15 IDT" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeSession -->
+      </class> <!-- sanity.ToDoListElectron -->
+    </test> <!-- Web Tests -->
+  </suite> <!-- Web Suite -->
+</testng-results>
