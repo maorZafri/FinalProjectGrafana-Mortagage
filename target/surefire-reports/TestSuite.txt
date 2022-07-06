@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.112 s - in TestSuite
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.248 s <<< FAILURE! - in TestSuite
+test02_addAndVerifyNewTasks(sanity.ToDoListElectron)  Time elapsed: 0.657 s  <<< FAILURE!
+java.lang.AssertionError: expected [4] but found [3]
+	at sanity.ToDoListElectron.test02_addAndVerifyNewTasks(ToDoListElectron.java:30)
+

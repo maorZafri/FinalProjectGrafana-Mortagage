@@ -12,7 +12,7 @@
 
     <BrowserName>chrome</BrowserName>
     <url>http://localhost:3000/</url>
-    <ImageRepo>C:\Automation\Projects\FinalProject\ImageRepository\GrafanaAvater.png</ImageRepo>
+    <ImageRepo>C:\Automation\FinalProject\ImageRepository\GrafanaAvater.png</ImageRepo>
 
     <!-- Data Driven Testing -->
     <DDTFile>./DDTFiles/users.csv</DDTFile>

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Web_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Web Suite</span>
+              <span class="suite-name border-failed">Web Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Web_Suite" class="hide-methods failed suite-Web_Suite"> (hide)</a> <!-- hide-methods failed suite-Web_Suite -->
+                      <a href="#" panel-name="suite-Web_Suite" class="show-methods failed suite-Web_Suite"> (show)</a> <!-- show-methods failed suite-Web_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Web_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Web_Suite" title="sanity.ToDoListElectron" class="method navigator-link" hash-for-method="test02_addAndVerifyNewTasks">test02_addAndVerifyNewTasks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Web_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,11 +117,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Web_Suite" title="sanity.ToDoListElectron" class="method navigator-link" hash-for-method="test01_addAndVerifyNewTask">test01_addAndVerifyNewTask</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Web_Suite" title="sanity.ToDoListElectron" class="method navigator-link" hash-for-method="test02_addAndVerifyNewTasks">test02_addAndVerifyNewTasks</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Web_Suite -->
@@ -122,6 +131,29 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Web_Suite" class="panel Web_Suite">
+          <div class="suite-Web_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">sanity.ToDoListElectron</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test02_addAndVerifyNewTasks">
+                  </a> <!-- test02_addAndVerifyNewTasks -->
+                  <span class="method-name">test02_addAndVerifyNewTasks</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [4] but found [3]
+	at extensions.Verifications.verifyNumber(Verifications.java:56)
+	at sanity.ToDoListElectron.test02_addAndVerifyNewTasks(ToDoListElectron.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test02 - Add And Verify New Tasks)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Web_Suite-class-failed -->
           <div class="suite-Web_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -135,15 +167,6 @@
                   <span class="method-name">test01_addAndVerifyNewTask</span>
                   <em>
 (Test01 - Add And Verify New Task)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test02_addAndVerifyNewTasks">
-                  </a> <!-- test02_addAndVerifyNewTasks -->
-                  <span class="method-name">test02_addAndVerifyNewTasks</span>
-                  <em>
-(Test02 - Add And Verify New Tasks)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,16 +228,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test01_addAndVerifyNewTask')
 data.setCell(0, 2, 'sanity.ToDoListElectron')
-data.setCell(0, 3, 2038);
+data.setCell(0, 3, 1253);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'test02_addAndVerifyNewTasks')
 data.setCell(1, 2, 'sanity.ToDoListElectron')
-data.setCell(1, 3, 269);
+data.setCell(1, 3, 285);
 window.suiteTableData['Web_Suite']= { tableData: data, tableDiv: 'times-div-Web_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Web_Suite">
               </div> <!-- times-div-Web_Suite -->
             </div> <!-- times-div -->
@@ -247,31 +270,33 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void sanity.ToDoListElectron.test01_addAndVerifyNewTask())</span>
-                <span class="method-start">4966 ms</span>
+                <span class="method-start">4915 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test01_addAndVerifyNewTask</span>
-                <span class="method-start">5116 ms</span>
+                <span class="method-start">5035 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">7375 ms</span>
+                <span class="method-start">6350 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void sanity.ToDoListElectron.test02_addAndVerifyNewTasks())</span>
-                <span class="method-start">12477 ms</span>
+                <span class="method-start">11469 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">test02_addAndVerifyNewTasks</span>
-                <span class="method-start">12484 ms</span>
+                <span class="method-start">11476 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">12809 ms</span>
+                <span class="method-start">12134 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeSession</span>
-                <span class="method-start">12901 ms</span>
+                <span class="method-start">12209 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

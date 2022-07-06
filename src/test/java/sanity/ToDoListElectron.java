@@ -27,6 +27,6 @@ public class ToDoListElectron extends CommonOps {
         ElectronFlows.addNewTask("Learn Java");
         ElectronFlows.addNewTask("Learn C#");
         ElectronFlows.addNewTask("Learn Python");
-        Verifications.verifyNumber(ElectronFlows.getNumberOfTasks(), 3);
+        Verifications.verifyNumber(ElectronFlows.getNumberOfTasks(), 4);
     }
 }

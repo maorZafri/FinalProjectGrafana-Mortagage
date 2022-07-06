@@ -14,7 +14,7 @@ public class MainPage {
 
     public MainPage (AppiumDriver mobileDriver){
         this.mobileDriver = mobileDriver;
-        PageFactory.initElements(new AppiumFieldDecorator(mobileDriver), this);
+        PageFactory.initElements(new AppiumFieldDecorator(mobileDriver,Duration.ofSeconds(3)), this);
 
     }
     @AndroidFindBy (id = "etAmount")
